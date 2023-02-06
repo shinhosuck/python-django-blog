@@ -1,0 +1,26 @@
+{% extends 'blog/index.html' %}
+
+
+
+<title>{% block title %} Home {% endblock title %}</title>
+
+
+
+{% block content %}
+<div>
+    <div class="form-container">
+        <form id='blog-form' action="/new/blog" method="POST">
+            {% csrf_token %}
+            <input type="hidden" value="/" name="next">
+            <div><input style='flex: 2; border: none' id='title' type="text" name="title" placeholder="Title"><p style="color: gray; font-size: 0.9rem;">0<span>/200</span></p></div>
+            <textarea name="content" id="" cols="30" rows="10" placeholder="What is on your mine...?"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="blog-container">
+        <div class="blogs">
+
+        </div>
+    </div>
+</div>
+{% endblock content %}
