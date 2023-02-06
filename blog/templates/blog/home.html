@@ -7,19 +7,119 @@
 
 
 {% block content %}
-<div>
-    <div class="form-container">
-        <form id='blog-form' action="/new/blog" method="POST">
-            {% csrf_token %}
-            <input type="hidden" value="/" name="next">
-            <div><input style='flex: 2; border: none' id='title' type="text" name="title" placeholder="Title"><p style="color: gray; font-size: 0.9rem;">0<span>/200</span></p></div>
-            <textarea name="content" id="" cols="30" rows="10" placeholder="What is on your mine...?"></textarea>
-            <button type="submit">Submit</button>
-        </form>
+<div class="main-container">
+    <div class="left-container">
+        <div class="left-header">
+            <h2>Latest blog</h2>
+        </div>
+        <div class="latest-blog-container">
+            <p>
+                Lorem Ipsum has been the industry's standard dummy 
+                text ever since the 1500s, when an unknown printer took 
+                a galley of type and scrambled it to make a type specimen book. 
+                It has survived not only five centuries
+            </p>
+        </div>
+        <div class="latest-blog-container">
+            <p>
+                Lorem Ipsum has been the industry's standard dummy 
+                text ever since the 1500s, when an unknown printer took 
+                a galley of type and scrambled it to make a type specimen book. 
+                It has survived not only five centuries
+            </p>
+        </div>
+        <div class="latest-blog-container">
+            <p>
+                Lorem Ipsum has been the industry's standard dummy 
+                text ever since the 1500s, when an unknown printer took 
+                a galley of type and scrambled it to make a type specimen book. 
+                It has survived not only five centuries
+            </p>
+        </div>
+        <div class="latest-blog-container">
+            <p>
+                Lorem Ipsum has been the industry's standard dummy 
+                text ever since the 1500s, when an unknown printer took 
+                a galley of type and scrambled it to make a type specimen book. 
+                It has survived not only five centuries
+            </p>
+        </div>
+        <div class="latest-blog-container">
+            <p>
+                Lorem Ipsum has been the industry's standard dummy 
+                text ever since the 1500s, when an unknown printer took 
+                a galley of type and scrambled it to make a type specimen book. 
+                It has survived not only five centuries
+            </p>
+        </div>
     </div>
-    <div class="blog-container">
+    <div class="center-container">
+        <div class="center-header">
+            <h2>Home</h2>
+        </div>
+        <div class="form-container">
+            <form id='blog-form' class='blog-form' action="/new/blog" method="POST">
+                {% csrf_token %}
+                <input type="hidden" value="/" name="next">
+                <input type="text" name="title" placeholder="Title">
+                <textarea name="content" id="" cols="30" rows="10" placeholder="What is on your mine...?"></textarea>
+                <div class="btns">
+                    <div class="font-awesome-btns">
+                        <div class="i-wrapper" title="{{ request.user }}"><i class="fa-solid fa-user"></i></div>
+                        <div class="i-wrapper" title="Up load image"><i class="fas fa-image"></i></div>
+                        <div class="i-wrapper" title="Up load file"><i class="fa-solid fa-file"></i></div>
+                    </div>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
         <div class="blogs">
-
+            <!-- <div class="blog"></div> goes here!!!!! -->
+        </div>
+    </div>
+    <div class="right-container">
+        <div class="right-header">
+            <h2>You might also like</h2>
+        </div>
+        <div class="you-might-also-like-container">
+            <p>
+                Lorem Ipsum has been the industry's standard dummy 
+                text ever since the 1500s, when an unknown printer took 
+                a galley of type and scrambled it to make a type specimen book. 
+                It has survived not only five centuries
+            </p>
+        </div>
+        <div class="you-might-also-like-container">
+            <p>
+                Lorem Ipsum has been the industry's standard dummy 
+                text ever since the 1500s, when an unknown printer took 
+                a galley of type and scrambled it to make a type specimen book. 
+                It has survived not only five centuries
+            </p>
+        </div>
+        <div class="you-might-also-like-container">
+            <p>
+                Lorem Ipsum has been the industry's standard dummy 
+                text ever since the 1500s, when an unknown printer took 
+                a galley of type and scrambled it to make a type specimen book. 
+                It has survived not only five centuries
+            </p>
+        </div>
+        <div class="you-might-also-like-container">
+            <p>
+                Lorem Ipsum has been the industry's standard dummy 
+                text ever since the 1500s, when an unknown printer took 
+                a galley of type and scrambled it to make a type specimen book. 
+                It has survived not only five centuries
+            </p>
+        </div>
+        <div class="you-might-also-like-container">
+            <p>
+                Lorem Ipsum has been the industry's standard dummy 
+                text ever since the 1500s, when an unknown printer took 
+                a galley of type and scrambled it to make a type specimen book. 
+                It has survived not only five centuries
+            </p>
         </div>
     </div>
 </div>

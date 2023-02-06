@@ -8,8 +8,8 @@ HOME
 ==== */
 function handleBlog(response){
     const new_blog = `
-        <div id='blog-${response.id}'>
-            <p>${response.id}</p>
+        <div class='blog' id='blog-${response.id}'>
+            <p>ID:${response.id}</p>
             <h3>${response.title}</h3>
             <p>${response.content}</p>
         </div>`
