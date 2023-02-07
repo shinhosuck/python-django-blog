@@ -47,6 +47,8 @@ HOME
 .left-container > 
 .left-header {
     padding: 0.5rem 0;
+    letter-spacing: 0.06rem;
+    color: rgb(0, 43, 4)
 }
 
 .left-container > 
@@ -77,6 +79,12 @@ HOME
     row-gap: 1rem;
     padding: 2rem 1rem 0 1rem;
     order: 1;
+}
+
+.center-container >
+.center-header {
+    letter-spacing: 0.06rem;
+    color: rgb(0, 43, 4)
 }
 
 .center-container > 
@@ -227,15 +235,19 @@ i:focus {
     row-gap: 1rem;
     padding: 0 1rem;
 }
+
 .right-container > 
 .right-header {
     padding: 0.5rem 0;
+    letter-spacing: 0.06rem;
+    color: rgb(0, 43, 4)
 }
+
 .right-container > 
 .you-might-also-like-container {
     border-radius: 10px;
     padding: 1rem;
-    background: rgb(233, 233, 233);
+    background: rgb(238, 238, 238);
 }
 
 .right-container > 
@@ -257,15 +269,15 @@ i:focus {
 
     .left-container {
         order: initial;
-        border-right: 1px solid rgb(230, 230, 230);
+        /* border-right: 1px solid rgb(230, 230, 230); */
         padding-top: 2rem
     }
     .center-container {
         order: initial;
-        padding: 2rem 2rem 0 2rem;
+        padding: 2rem 1rem 0 1rem;
     }
     .right-container {
-        border-left: 1px solid rgb(230, 230, 230);
+        /* border-left: 1px solid rgb(230, 230, 230); */
         order: initial;
         padding-top: 2rem;
     }
@@ -273,6 +285,23 @@ i:focus {
     .right-container > .right-header,
     .left-container > .left-header {
         padding: 0;
+        font-size: 0.7rem;
+        /* border: 1px solid red; */
+        background: rgb(0, 46, 0);
+        color: white;
+        padding:1rem;
+        text-align: center;
+        border-radius: 30px;
+    }
+
+    .right-container > 
+    .you-might-also-like-container {
+        text-align: center;
+    }
+
+    .left-container >
+    .latest-blog-container {
+        text-align: center;
     }
 }
 /* End of Screen 1000px and larger */

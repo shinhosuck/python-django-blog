@@ -7,10 +7,11 @@
 
 
 {% block content %}
+<div><h1>Home</h1></div>
 <div class="main-container">
     <div class="left-container">
         <div class="left-header">
-            <h2>Latest blog</h2>
+            <h1>Latest blog</h1>
         </div>
         <div class="latest-blog-container">
             <p>
@@ -54,9 +55,9 @@
         </div>
     </div>
     <div class="center-container">
-        <div class="center-header">
-            <h2>Home</h2>
-        </div>
+        <!-- <div class="center-header">
+            <h1>Home</h1>
+        </div> -->
         <div class="form-container">
             <form id='blog-form' class='blog-form' action="/new/blog" method="POST">
                 {% csrf_token %}
@@ -79,7 +80,7 @@
     </div>
     <div class="right-container">
         <div class="right-header">
-            <h2>You might also like</h2>
+            <h1>You might also like</h1>
         </div>
         <div class="you-might-also-like-container">
             <p>
