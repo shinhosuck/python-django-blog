@@ -1,5 +1,11 @@
+{% load static %}
+<style>
+    .nav-bar {
+        display: none;
+    }
+</style>
 
-<div class="nav-container">
+<div class="nav-bar">
     <nav class="nav-wrapper">
         <div class="brand-name-wrapper">
             <a href="{% url 'blog:home' %}">
@@ -18,4 +24,60 @@
             <li><a href="">Logout</a></li>
         </ul>
     </nav>
+</div>
+
+<!-- mobile navigation bar -->
+<div class="mobile-nav-bar">
+    <div class="mobile-brand-name">
+        <a href="{% url 'blog:home' %}">DjangoBlog</a>
+        <div class="font-awesome-btns">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+    <ul class="mobile-menu-items">
+        <li>
+            <a class="user-profile" href="">
+                <img src="{% static 'blog/profile_img/user_circle.png' %}" alt="">
+                <!-- <i class="fas fa-user"></i> -->
+                <div>
+                    <span>Admin</span>
+                    <span>Joined: Feb 12, 2022</span>
+                </div>
+            </a>
+        </li>
+        <li><a href="">Home</a></li>
+        <li><a href="">My blogs</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Login</a></li>
+        <li><a href="">Register</a></li>
+    </ul>
+    <div class="mobile-nav-items-fixed">
+        <nav class="nav-wrapper">
+            <!-- <form class='search-form' action="" method="GET">
+                <input type="text" name="search" placeholder="Your search">
+                <button type="submit">Search</button>
+            </form> -->
+            <ul class="mobile-nav-items">
+                <li>
+                    <a href="{% url 'blog:home' %}">
+                        <span><i class="fas fa-home"></i></span>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span><i class="fa-solid fa-plus"></i></span>
+                        <span>Create</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span><i class="fas fa-search"></i></span>
+                        <span>Search</span> 
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </div>

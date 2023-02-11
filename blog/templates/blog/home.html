@@ -1,5 +1,5 @@
 {% extends 'blog/index.html' %}
-
+{% load static %}
 
 
 <title>{% block title %} Home {% endblock title %}</title>
@@ -8,4 +8,101 @@
 
 {% block content %}
 
+
+    <style>
+        .contents {
+            width: 90%; 
+            /* margin: 0 auto;  */
+            display: grid; 
+            grid-template-rows: 1fr;
+            row-gap: 1rem;
+            margin: 5rem auto 4.5rem auto
+        }
+
+        .contents > div {
+            border: 1px solid lightgray;
+            border-radius: 10px;
+            padding: 1rem;
+        }
+
+        .contents > div > h1 {
+            font-size: 1.4rem;
+            padding-bottom: 0.5rem;
+        }
+
+        .contents > div > p {
+            color: gray;
+            letter-spacing: 0.05rem;
+            line-height: 1.;
+        }
+    </style>
+
+    <div class="contents">
+        <!-- 1 content -->
+        <div>
+            <h1>What is Lorem Ipsum?</h1>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                when an unknown printer took a galley of type and scrambled it to make a type 
+                specimen book.
+            </p>
+        </div>
+        <!-- 1 content -->
+        <!-- 2 content -->
+        <div>
+            <h1>What is Lorem Ipsum?</h1>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                when an unknown printer took a galley of type and scrambled it to make a type 
+                specimen book.
+            </p>
+        </div>
+        <!-- 2 content -->
+        <!-- 3 content -->
+        <div>
+            <h1>What is Lorem Ipsum?</h1>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                when an unknown printer took a galley of type and scrambled it to make a type 
+                specimen book.
+            </p>
+        </div>
+        <!-- 3 content -->
+        <!-- 4 content -->
+        <div>
+            <h1>What is Lorem Ipsum?</h1>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                when an unknown printer took a galley of type and scrambled it to make a type 
+                specimen book.
+            </p>
+        </div>
+        <!-- 4 content -->
+        <!-- 5 content -->
+        <div>
+            <h1>What is Lorem Ipsum?</h1>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                when an unknown printer took a galley of type and scrambled it to make a type 
+                specimen book.
+            </p>
+        </div>
+        <!-- 5 content -->
+        <!-- 6 content -->
+        <div>
+            <h1>What is Lorem Ipsum?</h1>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                when an unknown printer took a galley of type and scrambled it to make a type 
+                specimen book.
+            </p>
+        </div>
+        <!-- 6 content -->
+    </div>
 {% endblock content %}
