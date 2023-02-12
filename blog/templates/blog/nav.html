@@ -29,9 +29,16 @@
 <!-- mobile navigation bar -->
 <div class="mobile-nav-bar">
     <div class="mobile-brand-name">
-        <a href="{% url 'blog:home' %}">DjangoBlog</a>
+        <a href="{% url 'blog:home' %}">
+            <span>D</span>
+            <div>
+                <span class="l-span">JANGO</span>
+                <span>BLOG FORUM</span>
+            </div>
+        </a>
         <div class="font-awesome-btns">
             <i class="fas fa-bars"></i>
+            <i style="display: none;" class="fas fa-close"></i>
         </div>
     </div>
     <ul class="mobile-menu-items">
@@ -53,11 +60,11 @@
         <li><a href="">Register</a></li>
     </ul>
     <div class="mobile-nav-items-fixed">
-        <nav class="nav-wrapper">
-            <!-- <form class='search-form' action="" method="GET">
+        <nav class="mobile-nav-wrapper">
+            <form class='mobile-search-form' action="" method="GET">
                 <input type="text" name="search" placeholder="Your search">
                 <button type="submit">Search</button>
-            </form> -->
+            </form>
             <ul class="mobile-nav-items">
                 <li>
                     <a href="{% url 'blog:home' %}">
@@ -72,7 +79,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a class="mobile-search-btn" href="">
                         <span><i class="fas fa-search"></i></span>
                         <span>Search</span> 
                     </a>
