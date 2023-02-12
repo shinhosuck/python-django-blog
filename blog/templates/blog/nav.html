@@ -1,21 +1,25 @@
 {% load static %}
-<style>
-    .nav-bar {
-        display: none;
-    }
-</style>
+<!-- large screen  -->
 
 <div class="nav-bar">
     <nav class="nav-wrapper">
         <div class="brand-name-wrapper">
             <a href="{% url 'blog:home' %}">
-                DjangoBlog
+                <span>D</span>
+                <div>
+                    <span class="l-span">JANGO</span>
+                    <span>BLOG FORUM</span>
+                </div>
             </a>
         </div>
         <form class='search-form' action="" method="GET">
-            <input type="text" name="search" placeholder="Your search">
+            <input type="text" name="search" placeholder="Search by title or keyword">
             <button type="submit">Search</button>
         </form>
+        <div class="large-font-awesome-btns">
+            <i class="fas fa-bars bars-btn-2"></i>
+            <i class="fas fa-close close-btn-2"></i>
+        </div>
         <ul class="nav-items">
             <li><a href="{% url 'blog:home' %}">Home</a></li>
             <li><a href="">My blogs</a></li>
@@ -25,6 +29,7 @@
         </ul>
     </nav>
 </div>
+<!-- end of large screen -->
 
 <!-- mobile navigation bar -->
 <div class="mobile-nav-bar">
@@ -37,8 +42,8 @@
             </div>
         </a>
         <div class="font-awesome-btns">
-            <i class="fas fa-bars"></i>
-            <i style="display: none;" class="fas fa-close"></i>
+            <i class="fas fa-bars bars-btn"></i>
+            <i style="display: none;" class="fas fa-close close-btn"></i>
         </div>
     </div>
     <ul class="mobile-menu-items">
@@ -62,7 +67,7 @@
     <div class="mobile-nav-items-fixed">
         <nav class="mobile-nav-wrapper">
             <form class='mobile-search-form' action="" method="GET">
-                <input type="text" name="search" placeholder="Your search">
+                <input type="text" name="search" placeholder="Search by title or keyword">
                 <button type="submit">Search</button>
             </form>
             <ul class="mobile-nav-items">
@@ -88,3 +93,4 @@
         </nav>
     </div>
 </div>
+<!-- end of mobile screen -->

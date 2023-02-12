@@ -16,7 +16,10 @@
             display: grid; 
             grid-template-rows: 1fr;
             row-gap: 1rem;
-            margin: 5rem auto 4.5rem auto
+            /* margin: 5rem auto 4.5rem auto */
+            margin: 0 auto;
+            margin-bottom: 5rem;
+            margin-top: 2rem;
         }
 
         .contents > div {
@@ -35,8 +38,20 @@
             letter-spacing: 0.05rem;
             line-height: 1.;
         }
-    </style>
 
+        .hero-img {
+            margin-top: 4rem;
+        }
+
+        .hero-img > img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+    <div class="hero-img">
+        <img src="{% static 'blog/images/img1.jpg' %}" alt="">
+    </div>
     <div class="contents">
         <!-- 1 content -->
         <div>
