@@ -12,13 +12,11 @@
     <style>
         .contents {
             width: 90%; 
-            /* margin: 0 auto;  */
             display: grid; 
             grid-template-rows: 1fr;
             row-gap: 1rem;
-            /* margin: 5rem auto 4.5rem auto */
             margin: 0 auto;
-            margin-bottom: 5rem;
+            margin-bottom: 2rem;
             margin-top: 2rem;
         }
 
@@ -39,10 +37,6 @@
             line-height: 1.;
         }
 
-        .hero-img {
-            margin-top: 4rem;
-        }
-
         .hero-img > img {
             width: 100%;
             height: auto;
@@ -51,6 +45,7 @@
     </style>
     <div class="hero-img">
         <img src="{% static 'blog/images/img1.jpg' %}" alt="">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4);"></div>
     </div>
     <div class="contents">
         <!-- 1 content -->
