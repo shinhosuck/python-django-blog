@@ -1,4 +1,5 @@
 {% load static %}
+<link rel="stylesheet" type='text/css' href="{% static 'blog/nav.css' %}">
 <!-- large screen  -->
 
 <div class="nav-bar">
@@ -25,8 +26,14 @@
                 <a class="user-profile" href="">
                     <img src="{% static 'blog/profile_img/user_circle.png' %}" alt="">
                     <div class="user-info">
-                        <span>Admin</span>
+                        <span>Username: Admin</span>
                         <span>Joined: Feb 12, 2022</span>
+                        <div style="display: none;">
+                            <span>Location: Philippines</span>
+                            <span>Blogs: 10</span>
+                            <span>Likes: 22</span>
+                            <span>Following: 3</span>
+                        </div>
                     </div>
                 </a>
             </li>

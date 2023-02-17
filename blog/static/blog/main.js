@@ -9,6 +9,9 @@ const mobileSearch = document.querySelector('.mobile-search')
 const userProfile = document.querySelector('.user-profile')
 const userInfo = document.querySelector('.user-info')
 
+
+
+
 let clickEvents = function handleClickEvents(event) {
     
     if(event.currentTarget == barsBtn) {
@@ -46,10 +49,13 @@ let clickEvents = function handleClickEvents(event) {
             barsBtn.style.display = 'inline-block'
             mobileMenuItems.classList.remove('show-mobile-menu-items')
         }
-        if(window.innerWidth > 1150 || window.innerWidth === 780) {
+        if(window.innerWidth > 1150 || window.innerWidth < 770) {
             closeBtn2.style.display = 'none'
             barsBtn2.style.display = 'inline-block'
             navItems.classList.remove('show-nav-items')
+        }
+        if(window.innerWidth < 1150) {
+            userInfo.classList.remove('show-user-info')
         }
     }
 }
@@ -73,3 +79,5 @@ userProfile.addEventListener('click', clickEvents)
 //     let mobileNavHeight  = document.body.scrollHeight
 //     mobileMenuItems.style.height = `${mobileNavHeight}px`
 // })
+
+   

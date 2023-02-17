@@ -44,8 +44,44 @@
         }
     </style>
     <div class="hero-img">
-        <img src="{% static 'blog/images/img1.jpg' %}" alt="">
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4);"></div>
+        <img id='hero-img' src="{% static 'blog/images/img1.jpg' %}"  alt="">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5);
+            display: flex; justify-content: flex-end; align-items: center;">
+            <div style="color: white; flex: 0 0 50%;height: 100%; padding-right: 1rem; display: flex; align-items: center;">
+                <div style="width: 510.3px;">
+                    <h1 style="font-size: 3rem; letter-spacing: 0.05rem;">What is on your mine?</h1>
+                    <p style="font-size: 1.3rem; color: rgb(228, 228, 228); line-height: 1.5; letter-spacing: 0.05rem;
+                            margin-top: 0.5rem;">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    </p>
+                    <div style="text-align: start;">
+                        <button style="margin-top: 1rem; padding: 0.8rem 1.5rem; letter-spacing: 0.05rem;
+                        background: rgb(0, 206, 0); color: rgb(255, 255, 255); border-radius: 10px; font-size: 1.2rem; border: none;">Get started</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mobile-hero-img">
+        <img id='hero-img' src="{% static 'blog/images/img2.jpg' %}" alt="">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5);
+            display: flex; justify-content: flex-end; align-items: center;">
+            <div style="color: white; flex: 0 0 50%;height: 100%; padding-right: 1rem; display: flex; align-items: center;">
+                <div class='hero-text-container' style="width: 403.5px;">
+                    <h1 class="hero-header" style="font-size: 2rem; letter-spacing: 0.05rem;">What is on your mine?</h1>
+                    <p class='hero-text' style="font-size: 1rem; color: rgb(228, 228, 228); line-height: 1.5; letter-spacing: 0.05rem;
+                            margin-top: 0.5rem;">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    </p>
+                    <p class='hero-text2' style="display: none; color: rgb(228, 228, 228); line-height: 1.5; letter-spacing: 0.05rem;
+                        margin-top: 0.5rem;">Lorem Ipsum is simply dummy text</p>
+                    <div class='hero-btn' style="text-align: start;">
+                        <button style="margin-top: 1rem; padding: 0.8rem 1.5rem; letter-spacing: 0.05rem;
+                        background: rgb(0, 206, 0); color: rgb(255, 255, 255); border-radius: 10px; font-size: 1rem; border: none;">Create</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="contents">
         <!-- 1 content -->
