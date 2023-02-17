@@ -47,8 +47,12 @@ HOME
 ====*/
 
 .contents {
-    margin: 2rem auto 2rem auto !important
+    margin: 2rem auto 2rem auto !important;
 }
+
+
+
+/* mobile screen 839px and smaller */
 
 .hero-img {
     display: none;
@@ -64,33 +68,69 @@ HOME
     display: block;
 }
 
-@media screen and (min-width: 840px) {
+.mobile-hero-img-background-overlay {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.5);
+    display: flex; 
+    justify-content: flex-end; 
+    align-items: center;
+}
 
-    .mobile-hero-img {
-        display: none;
-    }
+.mobile-hero-img-text-container {
+    color: white; 
+    flex: 0 0 50%;
+    height: 100%; 
+    padding-right: 1rem; 
+    display: flex; 
+    align-items: center;
+}
 
-    .hero-img {
-        position: relative;
-        width: 100%;
-        height: auto;
-        display: block;
-    }
+.mobile-hero-img-text-wrapper {
+    width: 403.5px;
+}
 
-    .hero-img > img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
+.mobile-hero-img-text-wrapper > h1 {
+    font-size: 2rem; 
+    letter-spacing: 0.05rem;
+}
+
+.mobile-hero-img-text-wrapper > p {
+    font-size: 1rem; 
+    color: rgb(228, 228, 228); 
+    line-height: 1.5; 
+    letter-spacing: 0.05rem;
+    margin-top: 0.5rem;
+}
+
+.mobile-hero-img-text-wrapper > div {
+    text-align: start;
+}
+
+.mobile-hero-img-text-wrapper > div > a {
+    margin-top: 1rem; 
+    padding: 0.8rem 1.5rem; 
+    letter-spacing: 0.05rem;
+    background: rgb(0, 206, 0); 
+    color: rgb(255, 255, 255); 
+    border-radius: 10px; 
+    font-size: 1rem; 
+}
+
+.hero-text2 {
+    display: none;
 }
 
 @media screen and (max-width: 720px) {
 
-    .hero-text-container {
+    .mobile-hero-img-text-container {
         width: 344px !important;
     }
 
-    .hero-header {
+    .mobile-hero-img-text-wrapper > h1 {
         font-size: 1.5rem !important;
     }
     
@@ -98,35 +138,34 @@ HOME
         font-size: 0.9rem !important;
     }
 
-    .hero-btn > button {
+    .mobile-hero-img-text-wrapper > div > a {
         padding: 0.6rem 1.3rem !important
     }
 }
 
 @media screen and (max-width: 600px) {
-    .hero-text-container {
+    .mobile-hero-img-text-container {
         width: 300px !important;
     }
 }
 
 @media screen and (max-width: 522px) {
-    .hero-text-container {
+    .mobile-hero-img-text-container {
         width: 260px !important;
     }
 }
 
 @media screen and (max-width: 460px) {
 
-    .hero-text-container {
+    .mobile-hero-img-text-container {
         width: 195px !important;
     }
 
-    .hero-header {
+    .mobile-hero-img-text-wrapper > h1 {
         font-size: 1.1rem !important;
     }
     
     .hero-text {
-        font-size: 0.9rem !important;
         display: none !important;
     }
 
@@ -135,7 +174,7 @@ HOME
         font-size: 0.9rem !important;
     }
 
-    .hero-btn > button {
+    .mobile-hero-img-text-wrapper > div > a {
         padding: 0.6rem 1rem !important;
         font-size: 0.9rem !important;
         margin-top: 0.5rem !important
@@ -177,6 +216,80 @@ HOME
         text-align: center !important;
     }
 }
+
+/* end of mobile screen 839px and smaller*/
+
+@media screen and (min-width: 840px) {
+
+    .mobile-hero-img {
+        display: none;
+    }
+
+    .hero-img {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .hero-img > img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .hero-img-background-overlay {
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 100%; 
+        background: rgba(0, 0, 0, 0.5);
+        display: flex; 
+        justify-content: flex-end; 
+        align-items: center;
+    }
+
+    .hero-img-text-container {
+        color: white; 
+        flex: 0 0 50%;
+        height: 100%; 
+        padding-right: 1rem; 
+        display: flex; 
+        align-items: center;
+    }
+
+    .hero-img-text-wrapper {
+        width: 510.3px;
+    }
+
+    .hero-img-text-wrapper > h1 {
+        font-size: 3rem; 
+        letter-spacing: 0.05rem;
+    }
+
+    .hero-img-text-wrapper > p {
+        font-size: 1.3rem; 
+        color: rgb(228, 228, 228); 
+        line-height: 1.5; 
+        letter-spacing: 0.05rem;
+        margin-top: 0.5rem;
+    }
+
+    .hero-img-text-wrapper > div {
+        text-align: start;
+    }
+
+    .hero-img-text-wrapper > div > a {
+        margin-top: 1rem; 
+        padding: 0.8rem 1.5rem; 
+        letter-spacing: 0.05rem;
+        background: rgb(0, 206, 0); 
+        color: rgb(255, 255, 255); 
+        border-radius: 10px; 
+        font-size: 1.2rem; 
+    }
+}
+
 
 /*
 ===========
