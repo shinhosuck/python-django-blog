@@ -7,42 +7,6 @@
 
 
 {% block content %}
-
-
-    <style>
-        .contents {
-            width: 90%; 
-            display: grid; 
-            grid-template-rows: 1fr;
-            row-gap: 1rem;
-            margin: 0 auto;
-            margin-bottom: 2rem;
-            margin-top: 2rem;
-        }
-
-        .contents > div {
-            border: 1px solid lightgray;
-            border-radius: 10px;
-            padding: 1rem;
-        }
-
-        .contents > div > h1 {
-            font-size: 1.4rem;
-            padding-bottom: 0.5rem;
-        }
-
-        .contents > div > p {
-            color: gray;
-            letter-spacing: 0.05rem;
-            line-height: 1.;
-        }
-
-        .hero-img > img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-    </style>
     <div class="hero-img">
         <img id='hero-img' src="{% static 'blog/images/img1.jpg' %}"  alt="">
         <div class='hero-img-background-overlay'>
@@ -76,9 +40,13 @@
             </div>
         </div>
     </div>
-    <div class="contents">
+    <div class="scroll-up-container">
+        <a class='scroll-up' href="#header"><i class="fas fa-chevron-up"></i></a>
+    </div>
+    <div id='contents' class="contents">
+        <div><h1>All contents</h1></div>
         <!-- 1 content -->
-        <div>
+        <div id="content1">
             <h1>What is Lorem Ipsum?</h1>
             <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
@@ -166,5 +134,4 @@
         </div>
         <!-- 8 content -->
     </div>
-    
 {% endblock content %}

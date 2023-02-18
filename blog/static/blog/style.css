@@ -46,11 +46,66 @@ button {
 HOME
 ====*/
 
+.scroll-up-container {
+    margin: 0 auto;
+    width: 90%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 90%;
+    z-index: 10;
+    display: flex;
+    justify-content: flex-end;
+
+    max-height: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    opacity: 0;
+    transition: max-height 0s linear, opacity 0.5s linear;
+}
+
+.show-scroll-up-container {
+    max-height: 100px;
+    opacity: 1;
+}
+
+.scroll-up-container > a {
+    padding: 0.5rem 1rem;
+    font-size: 1.3rem;
+    color: rgb(255, 255, 255);
+    background: rgb(151, 151, 151);
+    border-radius: 10px;
+}
+
 .contents {
     margin: 2rem auto 2rem auto !important;
 }
 
+.contents {
+    width: 90%; 
+    display: grid; 
+    grid-template-rows: 1fr;
+    row-gap: 1rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
 
+.contents > div {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.contents > div > h1 {
+    font-size: 1.4rem;
+    padding-bottom: 0.5rem;
+}
+
+.contents > div > p {
+    color: gray;
+    letter-spacing: 0.05rem;
+    line-height: 1.;
+}
 
 /* mobile screen 839px and smaller */
 
@@ -288,6 +343,8 @@ HOME
         border-radius: 10px; 
         font-size: 1.2rem; 
     }
+
+
 }
 
 

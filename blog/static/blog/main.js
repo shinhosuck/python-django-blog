@@ -8,12 +8,20 @@ const mobileSearchForm = document.querySelector('.mobile-search-form')
 const mobileSearch = document.querySelector('.mobile-search')
 const userProfile = document.querySelector('.user-profile')
 const userInfo = document.querySelector('.user-info')
+const scrollUpContainer = document.querySelector('.scroll-up-container')
+const scrollUp = document.querySelector('.scroll-up')
 
 
-
+window.onscroll = function(){
+    if(window.pageYOffset >= 303) {
+        scrollUpContainer.classList.add('show-scroll-up-container')
+    }
+    if(window.pageYOffset <= 303) {
+        scrollUpContainer.classList.remove('show-scroll-up-container')
+    }
+}
 
 let clickEvents = function handleClickEvents(event) {
-    
     if(event.currentTarget == barsBtn) {
         mobileMenuItems.classList.toggle('show-mobile-menu-items')
         closeBtn.style.display = 'inline-block'
@@ -42,6 +50,9 @@ let clickEvents = function handleClickEvents(event) {
     if(event.currentTarget == userProfile) {
         event.preventDefault()
         userInfo.classList.toggle('show-user-info')
+    }
+    if(event.currentTarget == scrollUp) {
+        scrollUpContainer.classList.remove('show-scroll-up-container')
     }
     else if(event.target == window) {
         if(window.innerWidth > 780) {
@@ -74,10 +85,10 @@ mobileSearch.addEventListener('click', clickEvents)
 
 userProfile.addEventListener('click', clickEvents)
 
-// window.addEventListener('scroll', function() {
-//     console.log(document.body.offsetHeight)
-//     let mobileNavHeight  = document.body.scrollHeight
-//     mobileMenuItems.style.height = `${mobileNavHeight}px`
-// })
+scrollUp.addEventListener('click', clickEvents)
 
+
+window.addEventListener('click', function(event){
+    
+})
    
