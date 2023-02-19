@@ -1,21 +1,23 @@
 {% load static %}
-<link rel="stylesheet" type='text/css' href="{% static 'blog/nav.css' %}">
-<!-- large screen  -->
 
+<link rel="stylesheet" type='text/css' href="{% static 'blog/nav.css' %}">
+
+
+<!-- large screen  -->
 <div class="nav-bar">
     <nav class="nav-wrapper">
         <div class="brand-name-wrapper">
             <a href="{% url 'blog:home' %}">
-                <span>D</span>
+                <span>A</span>
                 <div>
-                    <span class="l-span">JANGO</span>
+                    <span class="l-span">IAILA</span>
                     <span>BLOG FORUM</span>
                 </div>
             </a>
         </div>
         <form class='search-form' action="" method="GET">
             <input type="text" name="search" placeholder="Search by title or keyword">
-            <button type="submit">Search</button>
+            <button name='submit-search' type="submit">Search</button>
         </form>
         <div class="large-font-awesome-btns">
             <i class="fas fa-bars bars-btn-2"></i>
@@ -24,7 +26,7 @@
         <ul class="nav-items">
             <li class="profile-container">
                 <a class="user-profile" href="">
-                    <img src="{% static 'blog/profile_img/user_circle.png' %}" alt="">
+                    <img src="{% static 'blog/profile_img/dog.webp' %}" alt="">
                     <div class="user-info">
                         <span>Username: Admin</span>
                         <span>Joined: Feb 12, 2022</span>
@@ -35,6 +37,7 @@
                             <span>Following: 3</span>
                         </div>
                     </div>
+                    <i class="fas fa-chevron-down profile-container-chevron"></i>
                 </a>
             </li>
             <li><a href=""><i class="fas fa-home"></i>Home</a></li>
@@ -53,9 +56,9 @@
 <div class="mobile-nav-bar">
     <div class="mobile-brand-name">
         <a href="{% url 'blog:home' %}">
-            <span>D</span>
+            <span>A</span>
             <div>
-                <span class="l-span">JANGO</span>
+                <span class="l-span">IAILA</span>
                 <span>BLOG FORUM</span>
             </div>
         </a>
@@ -67,7 +70,7 @@
     <ul class="mobile-menu-items">
         <li>
             <a class="user-profile" href="">
-                <img src="{% static 'blog/profile_img/user_circle.png' %}" alt="">
+                <img src="{% static 'blog/profile_img/dog.webp' %}" alt="">
                 <div>
                     <span>Admin</span>
                     <span>Joined: Feb 12, 2022</span>
@@ -78,7 +81,7 @@
         <li class='mobile-search-form'>
             <form action="" method="GET">
                 <input type="text" name="search" placeholder="Search by title or keyword">
-                <button ype="submit"><i class="fas fa-search"></i></button>
+                <button name='submit-search' type="submit"><i class="fas fa-search"></i></button>
             </form>
         </li>
         <li><a href=""><i class="fas fa-home"></i>Home</a></li>

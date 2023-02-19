@@ -10,6 +10,8 @@ const userProfile = document.querySelector('.user-profile')
 const userInfo = document.querySelector('.user-info')
 const scrollUpContainer = document.querySelector('.scroll-up-container')
 const scrollUp = document.querySelector('.scroll-up')
+const profileContainerChevron = document.querySelector('.profile-container-chevron')
+
 
 
 window.onscroll = function(){
@@ -39,7 +41,7 @@ let clickEvents = function handleClickEvents(event) {
         closeBtn2.style.display = 'inline-block'
     }
     if(event.currentTarget == closeBtn2) {
-        navItems.classList.toggle('show-nav-items')
+        navItems.classList.remove('show-nav-items')
         barsBtn2.style.display = 'inline-block'
         closeBtn2.style.display = 'none'
     }
@@ -48,8 +50,18 @@ let clickEvents = function handleClickEvents(event) {
         mobileSearchForm.classList.toggle('show-mobile-search-form')
     }
     if(event.currentTarget == userProfile) {
-        event.preventDefault()
         userInfo.classList.toggle('show-user-info')
+        if(window.innerWidth >= 1150) {
+            event.preventDefault()
+        }
+        if(userInfo.classList.contains('show-user-info')) {
+            profileContainerChevron.style.transform = 'rotate(540deg)'
+            profileContainerChevron.style.transition = 'transform 0.3s linear'
+        }
+        else {
+            profileContainerChevron.style.transform = 'initial'
+            
+        }
     }
     if(event.currentTarget == scrollUp) {
         scrollUpContainer.classList.remove('show-scroll-up-container')
@@ -67,6 +79,7 @@ let clickEvents = function handleClickEvents(event) {
         }
         if(window.innerWidth < 1150) {
             userInfo.classList.remove('show-user-info')
+            profileContainerChevron.style.transform = 'initial'
         }
     }
 }
@@ -86,9 +99,3 @@ mobileSearch.addEventListener('click', clickEvents)
 userProfile.addEventListener('click', clickEvents)
 
 scrollUp.addEventListener('click', clickEvents)
-
-
-window.addEventListener('click', function(event){
-    
-})
-   

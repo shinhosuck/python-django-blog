@@ -27,10 +27,11 @@ a {
     display: inline-block;
 }
 
-input:focus, 
-textarea:focus,
-a:focus {
+input:focus, input:active,
+textarea:focus, textarea:active,
+a:focus, a:active {
     outline: none;
+    background-color: none;
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -72,8 +73,12 @@ HOME
     padding: 0.5rem 1rem;
     font-size: 1.3rem;
     color: rgb(255, 255, 255);
-    background: rgb(151, 151, 151);
+    background: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
+}
+
+.scroll-up-container > a:hover {
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .contents {
@@ -131,47 +136,46 @@ HOME
     height: 100%; 
     background: rgba(0, 0, 0, 0.5);
     display: flex; 
-    justify-content: flex-end; 
+    justify-content: center; 
     align-items: center;
 }
 
 .mobile-hero-img-text-container {
     color: white; 
-    flex: 0 0 50%;
-    height: 100%; 
-    padding-right: 1rem; 
+    flex: 0 0 70%;
     display: flex; 
     align-items: center;
+    justify-content: center;
 }
 
 .mobile-hero-img-text-wrapper {
-    width: 403.5px;
+    text-align: center;
 }
 
 .mobile-hero-img-text-wrapper > h1 {
-    font-size: 2rem; 
+    font-size: 1rem; 
     letter-spacing: 0.05rem;
 }
 
 .mobile-hero-img-text-wrapper > p {
-    font-size: 1rem; 
+    font-size: 0.8rem; 
     color: rgb(228, 228, 228); 
-    line-height: 1.5; 
+    line-height: 1.3;  
     letter-spacing: 0.05rem;
-    margin-top: 0.5rem;
+    margin-top: 0.2rem;
 }
 
 .mobile-hero-img-text-wrapper > div {
-    text-align: start;
+    text-align: center;
 }
 
 .mobile-hero-img-text-wrapper > div > a {
-    margin-top: 1rem; 
-    padding: 0.8rem 1.5rem; 
+    margin-top: 0.5rem; 
+    padding: 0.5rem 1rem; 
     letter-spacing: 0.05rem;
     background: rgb(0, 206, 0); 
     color: rgb(255, 255, 255); 
-    border-radius: 10px; 
+    border-radius: 7px; 
     font-size: 1rem; 
 }
 
@@ -179,99 +183,76 @@ HOME
     display: none;
 }
 
-@media screen and (max-width: 720px) {
-
-    .mobile-hero-img-text-container {
-        width: 344px !important;
-    }
-
+@media screen and (min-width: 350px) {
     .mobile-hero-img-text-wrapper > h1 {
-        font-size: 1.5rem !important;
+        font-size: 1.3rem; 
     }
     
-    .hero-text {
-        font-size: 0.9rem !important;
+    .mobile-hero-img-text-wrapper > p {
+        font-size: 1rem; 
+        line-height: 1.2;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    .mobile-hero-img-text-wrapper > h1 {
+        font-size: 1.5rem; 
+    }
+    
+}
+
+@media screen and (min-width: 500px) {
+    .mobile-hero-img-text-wrapper > h1 {
+        font-size: 1.8rem; 
+    }
+    
+    .mobile-hero-img-text-wrapper > p {
+        line-height: 1.3;
+        margin-top: 0.5rem;
     }
 
     .mobile-hero-img-text-wrapper > div > a {
-        padding: 0.6rem 1.3rem !important
+        margin-top: 0.7rem; 
     }
 }
 
-@media screen and (max-width: 600px) {
-    .mobile-hero-img-text-container {
-        width: 300px !important;
-    }
-}
-
-@media screen and (max-width: 522px) {
-    .mobile-hero-img-text-container {
-        width: 260px !important;
-    }
-}
-
-@media screen and (max-width: 460px) {
-
-    .mobile-hero-img-text-container {
-        width: 195px !important;
-    }
-
+@media screen and (min-width: 600px) {
     .mobile-hero-img-text-wrapper > h1 {
-        font-size: 1.1rem !important;
+        font-size: 2rem; 
     }
     
-    .hero-text {
-        display: none !important;
-    }
-
-    .hero-text2 {
-        display: block !important;
-        font-size: 0.9rem !important;
+    .mobile-hero-img-text-wrapper > p {
+        font-size: 1.1rem; 
     }
 
     .mobile-hero-img-text-wrapper > div > a {
-        padding: 0.6rem 1rem !important;
-        font-size: 0.9rem !important;
-        margin-top: 0.5rem !important
+        padding: 0.8rem 1.5rem; 
+        border-radius: 10px;
+        font-size: 1.2rem; 
     }
 }
 
-@media screen and (max-width: 375px) {
-
-    .hero-text-container {
-        width: 180px !important;
-    }
-
-    .hero-header {
-        font-size: 1rem !important;
+@media screen and (min-width: 700px) {
+    .mobile-hero-img-text-wrapper > h1 {
+        font-size: 2.3rem; 
     }
     
-    .hero-text2 {
-        display: block !important;
-        font-size: 0.8rem !important;
-        margin-top: 0.3rem !important;
+    .mobile-hero-img-text-wrapper > p {
+        font-size: 1.2rem; 
     }
 
-    .hero-btn > button {
-        padding: 0.4rem 0.8rem !important;
-        font-size: 0.8rem !important;
-        margin-top: 0.3rem !important;
-        border-radius: 5px !important;
-    }
 }
 
-@media screen and (max-width: 324px) {
-
-    .hero-text-container {
-        width: 180px !important;
-        text-align: center;
+@media screen and (min-width: 800px) {
+    .mobile-hero-img-text-wrapper > h1 {
+        font-size: 2.5rem; 
+    }
+    
+    .mobile-hero-img-text-wrapper > p {
+        font-size: 1.2rem; 
     }
 
-    .hero-btn {
-        text-align: center !important;
-    }
 }
-
 /* end of mobile screen 839px and smaller*/
 
 @media screen and (min-width: 840px) {
@@ -313,21 +294,17 @@ HOME
         align-items: center;
     }
 
-    .hero-img-text-wrapper {
-        width: 510.3px;
-    }
-
     .hero-img-text-wrapper > h1 {
-        font-size: 3rem; 
+        font-size: 2.4rem; 
         letter-spacing: 0.05rem;
     }
 
     .hero-img-text-wrapper > p {
-        font-size: 1.3rem; 
         color: rgb(228, 228, 228); 
-        line-height: 1.5; 
+        line-height: 1.3; 
         letter-spacing: 0.05rem;
         margin-top: 0.5rem;
+        font-size: 1.2rem;
     }
 
     .hero-img-text-wrapper > div {
@@ -335,7 +312,7 @@ HOME
     }
 
     .hero-img-text-wrapper > div > a {
-        margin-top: 1rem; 
+        margin-top: 0.7rem; 
         padding: 0.8rem 1.5rem; 
         letter-spacing: 0.05rem;
         background: rgb(0, 206, 0); 
@@ -343,10 +320,41 @@ HOME
         border-radius: 10px; 
         font-size: 1.2rem; 
     }
-
-
 }
 
+@media screen and (min-width: 1000px) {
+    .hero-img-text-wrapper > h1 {
+        font-size: 2.6rem; 
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .hero-img-text-wrapper > h1 {
+        font-size: 2.8rem; 
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .hero-img-text-wrapper > h1 {
+        font-size: 3rem; 
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .hero-img-text-wrapper > h1 {
+        font-size: 3.2rem; 
+    }
+
+    .hero-img-text-wrapper > p {
+        font-size: 1.3rem; 
+    }
+
+    .hero-img-text-wrapper > div > a {
+        margin-top: 1rem; 
+        padding: 1rem 1.7rem; 
+        font-size: 1.3rem;
+    }
+}
 
 /*
 ===========

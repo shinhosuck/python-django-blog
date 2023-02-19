@@ -41,11 +41,13 @@ NAVIGATION
 
 .mobile-brand-name > a > div > span:first-child{
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
 }
 
 .mobile-brand-name > a > div > span:last-child {
-    color: rgb(233, 233, 233);
+    color: rgb(202, 202, 202);
+    font-size: 0.8rem;
+    font-weight: bold;
 }
 
 .mobile-brand-name > .font-awesome-btns {
@@ -112,9 +114,14 @@ NAVIGATION
 
 .mobile-menu-items > li > .user-profile > img {
     width: 60px;
-    height: auto;
+    height: 60px;
+    border-radius: 50%;
     display: block;
-    padding-right: 0.5rem;
+    /* padding-right: 0.5rem; */
+}
+
+.mobile-menu-items > li > .user-profile > div {
+    padding-left: 0.5rem;
 }
 
 .mobile-menu-items > li > .user-profile > div > span {
@@ -215,7 +222,9 @@ NAVIGATION
     }
     
     .brand-name-wrapper > a > div > span:last-child {
-        color: white;
+        color: rgb(201, 201, 201);
+        font-weight: bold;
+        font-size: 0.8rem;
     }
     
     .search-form {
@@ -272,11 +281,9 @@ NAVIGATION
         background: rgb(121, 0, 121);
         position: absolute;
         z-index: 1;
-        /* default 75px */
         top: 85px;
         right: 10px;
         width: 40%;
-        /* max-width: 400px; */
         opacity: 0;
         border-radius: 10px;
         max-height: 0;
@@ -300,13 +307,25 @@ NAVIGATION
         display: flex;
         align-items: center;
     }
+
+    .nav-items > .profile-container > .user-profile > i {
+        color: white;
+        font-size: 1rem;
+        display: none;
+    }
+
     .nav-items > li > .user-profile > img {
         width: 60px;
-        height: auto;
+        height: 60px;
+        border-radius: 50%;
         display: block;
-        padding-right: 0.5rem;
+        /* padding-right: 0.5rem; */
     }
-    
+
+    .nav-items > li > .user-profile > div {
+        padding-left: 0.5rem;
+    }
+
     .nav-items > li > .user-profile > div > span {
         display: block;
         padding: 1px 0;
@@ -326,6 +345,10 @@ NAVIGATION
         background: rgb(80, 0, 80)
     }
 
+    /* .nav-items > li:first-child:hover{
+        background: rgb(80, 0, 80)
+    } */
+
 }
 
 @media screen and (min-width: 1150px) {
@@ -341,7 +364,6 @@ NAVIGATION
         right: initial;
         width: initial;
         max-width: initial;
-        /* opacity: initial; */
         opacity: 1;
         border-radius: 0;
         max-height: initial;
@@ -352,7 +374,7 @@ NAVIGATION
         display: flex;
         align-items: center;
         justify-content: space-between;
-        column-gap: 1.5rem;
+        column-gap: 2rem;
         letter-spacing: 0.05rem;
     }
 
@@ -374,6 +396,24 @@ NAVIGATION
         order: 5;
     }
 
+    .nav-items > .profile-container > .user-profile {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-items > .profile-container > a > img {
+        height: 45px !important;
+        width: 45px !important;
+        border-radius: 50%;
+        display: block;
+        margin-right: 0.5rem;
+    }
+
+    .nav-items > .profile-container > .user-profile > i {
+        display: inline-block;
+        padding-right: 0 !important
+    }
+
     .nav-items > .profile-container > a > div {
         position:absolute;
         z-index: 3;
@@ -387,6 +427,7 @@ NAVIGATION
         border-radius: 10px;
         opacity: 0;
         transition: max-width 0s linear, opacity 0.5s linear;
+        padding-left: initial
     }
 
     .show-user-info {
@@ -404,11 +445,6 @@ NAVIGATION
     .nav-items > li > a > div > span:last-child {
         border-bottom: none;
     } 
-
-    .nav-items > .profile-container > a > img {
-        height: auto;
-        width: 45px !important
-    }
 
     .nav-items > .profile-container > 
     .user-profile > .user-info > div {
